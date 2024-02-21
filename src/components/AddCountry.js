@@ -7,7 +7,7 @@ const AddCountry = () => {
     const [newCountryCode, setNewCountryCode] = useState('');
 
         const newCountry = async () => {
-            const response = 
+                
                 await axios.post('https://xc-countries-api.fly.dev/api/countries/', {
                     code: newCountryCode,
                     name: newCountryName
@@ -19,19 +19,24 @@ const AddCountry = () => {
     return (
         <>
             <div>
+                
                 <input 
                     type="text" 
                     id="addCountry" 
                     value={newCountryName}
                     onChange={(e)=> setNewCountryName(e.target.value)} 
-                    placeholder="Add a Country">
+                    style={{textTransform: "capitalize"}}
+                    pattern="[A-Za-z]"
+                    placeholder="Country Name...">
                 </input>
                 <input 
                     type="text" 
                     id="addCountryCode" 
                     value={newCountryCode}
-                    onChange={(e)=> setNewCountryCode(e.target.value)} 
-                    placeholder="Enter your Country Code">
+                    onChange={(e)=> setNewCountryCode(e.target.value.toUpperCase())} 
+                    maxLength='2' minLength='2' 
+                    pattern="/^[a-zA-Z]+$/"
+                    placeholder="Country Code...">
                 </input>
                 <button 
                     type="submit" 

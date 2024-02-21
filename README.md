@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+# Countries and States
+
+Your wrap-up exercise for your onboarding is to make a website (can be just a single HTML page) that will use JavaScript to get data from an external REST API.  The details are as follows:
+
+1. When the page loads, populate a dropdown menu with the results from a `GET` call to `https://xc-countries-api.fly.dev/api/countries/`
+2. When a country is selected from the country dropdown, populate a second dropdown with the results from a `GET` call to `https://xc-countries-api.fly.dev/api/countries/<country_code>/states/`
+3. Once all of that is done, create a way to add a new country by sending a `POST` call to `https://xc-countries-api.fly.dev/api/countries/`
+5. Create a way to add new states by sending a `POST` call to `https://xc-countries-api.fly.dev/api/states/`
+
+[Insomnia](https://insomnia.rest) and [Postman](https://www.postman.com) are tools for interacting with REST APIs (which is what `https://xc-countries-api.fly.dev/api/` is), so feel free to use them to experiment and understand the data your page will be receiving from the `GET` requests, and what it should send in a `POST` request.
+
+=======
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +81,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+>>>>>>> 295271d (components updated)
