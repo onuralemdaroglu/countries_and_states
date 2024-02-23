@@ -5,8 +5,8 @@ const AddState = () => {
     const [countries, setCountries] = useState([]);
 
     const [selectedCountryId, setSelectedCountryId] = useState('');
-    const [newStateName, setNewStateName] = useState();
-    const [newStateCode, setNewStateCode] = useState();
+    const [newStateName, setNewStateName] = useState('');
+    const [newStateCode, setNewStateCode] = useState('');
 
     useEffect(() => {
         fetch('https://xc-countries-api.fly.dev/api/countries/')
@@ -27,7 +27,8 @@ const AddState = () => {
    /*  useEffect(() =>{
         console.log(selectedCountryId);
     },[selectedCountryId] )
- */
+    */
+
     const newState = async () => {
         
             await axios.post('https://xc-countries-api.fly.dev/api/states/', {
@@ -37,19 +38,18 @@ const AddState = () => {
             });
     }
 
-
     return (
         <>
             <div>
                 <div className="stateCountrySelect">
-                <h1>Select Country</h1>
+                <h3 className="selectCountry">Select Country</h3>
                 <select 
                     name='countries' 
                     id='countries' 
                     placeholder={'Select Country'}
                     onChange={(e) => setSelectedCountryId(e.target.value)} 
                     
-                    style={{backgroundColor:'black', color:'white', borderRadius:'5px', fontSize:'1.3rem', marginRight:'3rem'}}
+                    style={{backgroundColor:'black', color:'white', borderRadius:'5px', fontSize:'1rem', height: '2.2rem'}}
                 >
                 {   
                     countries.map((country) => (                    
@@ -62,8 +62,7 @@ const AddState = () => {
                 type="text" 
                 placeholder="Add a State"
                 value={newStateName}
-                onChange={(e) => setNewStateName(e.target.value)}
-                style={{textTransform: "capitalize"}} >
+                onChange={(e) => setNewStateName(e.target.value)} >
             </input>
             <input 
                 type="text" 
@@ -77,12 +76,14 @@ const AddState = () => {
                     type="submit" 
                     className="addBtn" 
                     id="btn"
+                    value={selectedCountryId}
                     onClick={newState}
                     style={
                         {backgroundColor:'black', 
                         color:'white', 
                         borderRadius:'5px', 
-                        marginRight:'1rem'
+                        marginRight:'1rem',
+                        height: '2.2rem' 
                     }}>
                     Add State
                 </button>

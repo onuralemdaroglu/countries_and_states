@@ -31,8 +31,8 @@
 button, 
 input {
   box-sizing: border-box;
-  width: 50%;
-  background-color: white;
+  width: 40%;
+  background-color: whitesmoke;
   font-size: 1rem;
   color: #000;
 }
@@ -45,6 +45,10 @@ input {
   margin: 0;
   padding: 0;
   text-decoration: none;
+}
+
+.selectCountry {
+  padding-right: 3.5rem;
 }
 
 .menu_list {
@@ -63,7 +67,7 @@ input {
 }
 
 .stateCountrySelect {
-  margin-bottom: 2rem ;
-  padding-top: 0;
+  display: flex;
+  justify-content: center;
 }
 

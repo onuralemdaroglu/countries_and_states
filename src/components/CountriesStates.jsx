@@ -52,7 +52,7 @@ const CountriesStates = () => {
                     placeholder={'Select Country'}
                     onChange={HandleSelect} 
                     
-                    style={{backgroundColor:'black', color:'white', borderRadius:'5px', fontSize:'1.3rem', marginRight:'3rem'}}
+                    style={{backgroundColor:'black', color:'white', borderRadius:'5px', fontSize:'1.3rem', marginRight:'3rem', marginBottom: '1rem'}}
                 >
                 {   
                     countries.map((country) => (                    
@@ -67,7 +67,7 @@ const CountriesStates = () => {
                     name='states' 
                     id='states' 
                     placeholder='Select Country'
-                    style={{backgroundColor:'black', color:'white', borderRadius:'5px', fontSize:'1.3rem', marginRight:'3rem'}}>
+                    style={{backgroundColor:'black', color:'white', borderRadius:'5px', fontSize:'1.1rem', marginRight:'3rem'}}>
                 {   
                     states/* .sort((a,b) => {
                         return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1

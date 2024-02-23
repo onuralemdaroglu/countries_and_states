@@ -35,9 +35,9 @@ function App() {
         </div>
       <br />
       <br />
-      <div>
-      <iframe src="https://giphy.com/embed/3o7WIB00yXujVt4WEo" width="480" height="480" frameBorder="0"></iframe><p><a href="https://giphy.com/gifs/3o7WIB00yXujVt4WEo"></a></p>
-      </div>
+        <div>
+          <iframe src="https://giphy.com/embed/3o7WIB00yXujVt4WEo" width="480" height="480" frameBorder="0"></iframe><p><a href="https://giphy.com/gifs/3o7WIB00yXujVt4WEo"></a></p>
+        </div>
       
     </div>
   );

@@ -25,7 +25,6 @@ const AddCountry = () => {
                     id="addCountry" 
                     value={newCountryName}
                     onChange={(e)=> setNewCountryName(e.target.value)} 
-                    style={{textTransform: "capitalize"}}
                     pattern="[A-Za-z]"
                     placeholder="Country Name...">
                 </input>
@@ -46,7 +45,8 @@ const AddCountry = () => {
                     {backgroundColor:'black', 
                     color:'white', 
                     borderRadius:'5px', 
-                    marginRight:'1rem'
+                    marginRight:'1rem',
+                    height: '2rem' 
                 }}
                 >Add Country
                 </button>
