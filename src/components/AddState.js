@@ -9,7 +9,7 @@ const AddState = () => {
     const [newStateCode, setNewStateCode] = useState('');
 
     useEffect(() => {
-        fetch('https://xc-countries-api.fly.dev/api/countries/')
+        fetch('http://127.0.0.1:8000/countries/')
             .then((res => res.json()
             ))
             .then((data) => {
@@ -31,7 +31,7 @@ const AddState = () => {
 
     const newState = async () => {
         
-            await axios.post('https://xc-countries-api.fly.dev/api/states/', {
+            await axios.post('http://127.0.0.1:8000/states/', {
                 countryId: selectedCountryId,
                 code: newStateCode,
                 name: newStateName

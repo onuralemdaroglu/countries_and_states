@@ -8,7 +8,7 @@ const AddCountry = () => {
 
         const newCountry = async () => {
                 
-                await axios.post('https://xc-countries-api.fly.dev/api/countries/', {
+                await axios.post('http://127.0.0.1:8000/countries/', {
                     code: newCountryCode,
                     name: newCountryName
                 });

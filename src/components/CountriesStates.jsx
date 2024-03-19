@@ -7,7 +7,7 @@ const CountriesStates = () => {
     const [selectedCountryCode, setSelectedCountryCode ] = useState('');
     
     useEffect(() => {
-        fetch('https://xc-countries-api.fly.dev/api/countries/')
+        fetch('http://127.0.0.1:8000/countries/')
             .then((response) => {
                 return response.json();
             })
@@ -28,7 +28,7 @@ const CountriesStates = () => {
                 setStates([]);
                 return;
             } 
-            fetch(`https://xc-countries-api.fly.dev/api/countries/${selectedCountryCode}/states/`)
+            fetch(`http://127.0.0.1:8000/countries/${selectedCountryCode}/states/`)
                 .then((response) => {
                     return response.json();
                 })
